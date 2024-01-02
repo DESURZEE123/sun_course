@@ -10,40 +10,41 @@
  * @param icon 配置路由的图标，取值参考 https://ant.design/components/icon-cn， 注意去除风格后缀和大小写，如想要配置图标为 <StepBackwardOutlined /> 则取值应为 stepBackward 或 StepBackward，如想要配置图标为 <UserOutlined /> 则取值应为 user 或者 User
  * @doc https://umijs.org/docs/guides/routes
  */
-export default [ 
-  {
-    path: '/Welcome',
-    icon: 'smile',
-    layout: false,
-    component: './Welcome',
-  },
+export default [
   {
     path: '/',
-    redirect: '/home'
+    redirect: '/home',
+    layout: false
   },
-
   {
     name: '首页',
     path: '/home',
-    component: './Home',
+    // layout: false,  // 不使用layout配置 
+    component: './Home'
+  },
+  {
+    name: '资料查询',
+    path: '/material',
+    component: './Material'
+  },
+  {
+    name: '课后作业',
+    path: '/homework',
+    component: './Homework'
+  },
+  {
+    name: '讨论区域',
+    path: '/discuss',
+    component: './Discuss'
   },
   {
     name: '权限演示',
     path: '/access',
-    component: './Access',
-  },
-  {
-    name: ' CRUD 示例',
-    path: '/table',
-    component: './Table',
+    component: './Access'
   },
   {
     path: '/*',
     layout: false,
     component: './404'
-  },
-
+  }
 ]
-
-
-

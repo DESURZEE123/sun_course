@@ -14,9 +14,8 @@ export default defineConfig({
   initialState: {},
   request: {},
   layout: {
-    title: '@umijs/max',
+    title: '平台设计',
   },
- 
 
   routes
 });
