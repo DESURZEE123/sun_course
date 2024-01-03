@@ -1,5 +1,5 @@
-import { UserOutlined } from '@ant-design/icons'
-import { Avatar, Card, Col, Row, Space, Tree } from 'antd'
+import DiscussCard from '@/components/DiscussCard'
+import { Col, Row, Tree } from 'antd'
 import './index.less'
 
 const treeData = [
@@ -67,48 +67,7 @@ const HomePage = () => {
           </div>
         </Col>
         <Col span={12}>
-          <Card style={{ marginBottom: '10px' }}>
-            <Space>
-              <Avatar style={{ backgroundColor: '#c5ccdd' }} icon={<UserOutlined />} />
-              <div>
-                <span className='text-detail'>王怡阳</span>
-                <div className='text-detail'>09-15 11:23</div>
-              </div>
-            </Space>
-            <div>
-              <div className='text'>讨论1xxxxxxxxxx</div>
-              <span className='text-detail'>回复 64</span>
-              <span className='text-detail'>赞 32</span>
-            </div>
-          </Card>
-          <Card style={{ marginBottom: '10px' }}>
-            <Space>
-              <Avatar style={{ backgroundColor: '#c5ccdd' }} icon={<UserOutlined />} />
-              <div>
-                <span className='text-detail'>王怡阳</span>
-                <div className='text-detail'>09-15 11:23</div>
-              </div>
-            </Space>
-            <div>
-              <div className='text'>讨论1xxxxxxxxxx</div>
-              <span className='text-detail'>回复 64</span>
-              <span className='text-detail'>赞 32</span>
-            </div>
-          </Card>
-          <Card style={{ marginBottom: '10px' }}>
-            <Space>
-              <Avatar style={{ backgroundColor: '#c5ccdd' }} icon={<UserOutlined />} />
-              <div>
-                <span className='text-detail'>王怡阳</span>
-                <div className='text-detail'>09-15 11:23</div>
-              </div>
-            </Space>
-            <div>
-              <div className='text'>讨论1xxxxxxxxxx</div>
-              <span className='text-detail'>回复 64</span>
-              <span className='text-detail'>赞 32</span>
-            </div>
-          </Card>
+          <DiscussCard />
         </Col>
       </Row>
     </>

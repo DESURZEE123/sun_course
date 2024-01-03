@@ -16,7 +16,6 @@ export default defineConfig({
   layout: {
     title: '平台设计',
   },
-
   routes
 });
 

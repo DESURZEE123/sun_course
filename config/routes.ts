@@ -18,29 +18,37 @@ export default [
   },
   {
     name: '首页',
+    icon: 'SmileOutlined',
     path: '/home',
-    // layout: false,  // 不使用layout配置 
-    component: './Home'
+    // layout: false,  // 不使用layout配置
+    component: './home'
   },
   {
     name: '资料查询',
     path: '/material',
-    component: './Material'
+    icon: 'FolderOutlined',
+    component: './material'
   },
   {
     name: '课后作业',
     path: '/homework',
-    component: './Homework'
+    icon: 'FileDoneOutlined',
+    // access: 'canRoute',
+    routes: [
+      { path: '/homework', component: './homework' },
+      { path: '/homework/details', component: './homework/details' }
+    ]
   },
   {
     name: '讨论区域',
     path: '/discuss',
-    component: './Discuss'
+    icon: 'TeamOutlined',
+    component: './discuss'
   },
   {
     name: '权限演示',
     path: '/access',
-    component: './Access'
+    component: './access'
   },
   {
     path: '/*',
