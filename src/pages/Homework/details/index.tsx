@@ -1,6 +1,7 @@
 import { Card, Flex } from 'antd'
 import styled from 'styled-components'
 import StuWork from './StuWork'
+import TeaPubWork from './TeaPubWork'
 
 const QuestionTitle = styled.div`
   margin: 10px 0;
@@ -17,7 +18,7 @@ const HomeWorkDeatil = () => {
           <span>返回</span>
         </Flex>
       </QuestionTitle>
-
+      <TeaPubWork />
       <StuWork />
     </Card>
   )
