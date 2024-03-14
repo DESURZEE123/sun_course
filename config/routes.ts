@@ -21,7 +21,10 @@ export default [
     icon: 'SmileOutlined',
     path: '/home',
     // layout: false,  // 不使用layout配置
-    component: './home'
+    routes: [
+      { path: '/home', component: './home' },
+      { path: '/home/edit', component: './home/edit' }
+    ]
   },
   {
     name: '资料查询',
@@ -36,14 +39,19 @@ export default [
     // access: 'canRoute',
     routes: [
       { path: '/homework', component: './homework' },
-      { path: '/homework/details', component: './homework/details' }
+      { path: '/homework/details/StuWork', component: './homework/details/StuWork' },
+      { path: '/homework/details/TeaPubWork', component: './homework/details/TeaPubWork' }
     ]
   },
   {
     name: '讨论区域',
     path: '/discuss',
     icon: 'TeamOutlined',
-    component: './discuss'
+    // component: './discuss'
+    routes: [
+      { path: '/discuss', component: './discuss' },
+      { path: '/discuss/detail', component: './discuss/detail' },
+    ]
   },
   {
     name: '权限演示',

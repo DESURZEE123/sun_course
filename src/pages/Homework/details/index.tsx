@@ -18,7 +18,7 @@ const HomeWorkDeatil = () => {
           <span>返回</span>
         </Flex>
       </QuestionTitle>
-      <TeaPubWork />
+      {/* <TeaPubWork /> */}
       <StuWork />
     </Card>
   )

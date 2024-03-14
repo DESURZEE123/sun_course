@@ -1,5 +1,11 @@
-import { UserOutlined } from '@ant-design/icons'
-import { Avatar, Card, Space } from 'antd'
+import { LikeOutlined, MessageOutlined, UserOutlined } from '@ant-design/icons'
+import { Avatar, Button, Card, Space } from 'antd'
+import styled from 'styled-components'
+
+const ReplayLike = styled.div`
+  display: flex;
+  margin-top: 5px;
+`
 
 export default () => {
   return (
@@ -14,8 +20,31 @@ export default () => {
       <div>
         <div className='text'>讨论1xxxxxxxxxx</div>
         <div>讨论的内容讨论的内容讨论的内容讨论的内容讨论的内容讨论的内容讨论的内容讨论的内容讨论的内容讨论的内容</div>
-        <span className='text-detail'>回复 64</span>
-        <span className='text-detail'>赞 32</span>
+        <ReplayLike>
+          {/* <MessageOutlined /> */}
+          <div style={{ marginRight: '15px' }}>
+            <Button
+              shape='circle'
+              size='small'
+              icon={<MessageOutlined />}
+              onClick={() => {
+                // reviewLog(item)
+              }}
+            />
+            <span className='text-detail'> 回复 64</span>
+          </div>
+          <div>
+            <Button
+              shape='circle'
+              size='small'
+              icon={<LikeOutlined />}
+              onClick={() => {
+                // reviewLog(item)
+              }}
+            />
+            <span className='text-detail'> 赞 32</span>
+          </div>
+        </ReplayLike>
       </div>
     </Card>
   )

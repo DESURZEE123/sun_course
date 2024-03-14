@@ -11,20 +11,20 @@ const HomeWork = () => {
   const items = [
     {
       key: '1',
-      label: 'Tab 1',
+      label: '我的作业',
       children: 'Content of Tab Pane 1'
     },
     {
       key: '2',
-      label: 'Tab 2',
+      label: '待批作业',
       children: 'Content of Tab Pane 2'
     }
   ]
 
   const goDetail = () => {
     // history.push('/pages/commonLink/list/edit?id=' + id)
-    history.push('/homework/details')
-    console.log(111)
+    // history.push('/homework/details/StuWork')
+    history.push('/homework/details/TeaPubWork')
   }
 
   return (
