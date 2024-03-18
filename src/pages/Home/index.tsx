@@ -1,17 +1,11 @@
 import DiscussCard from '@/components/DiscussCard'
 import { Col, Row } from 'antd'
+import { useModel } from 'umi'
 import TreeDirectory from './TreeDirectory'
 
 const HomePage = () => {
-  // ;(function countClicks() {
-  //   let numClicks = 0
-  //   document.addEventListener('click', () => {
-  //     alert(++numClicks)
-  //   })
-  // })()
-
-
-  
+  const { discussList } = useModel('system')
+  console.log(discussList)
 
   return (
     <>
@@ -20,11 +14,9 @@ const HomePage = () => {
           <TreeDirectory />
         </Col>
         <Col span={12}>
-          <DiscussCard />
-          <DiscussCard />
-          <DiscussCard />
-          <DiscussCard />
-          <DiscussCard />
+          {discussList.map((item: { idDiscussion: number }) => {
+            return <DiscussCard TitleList={item} key={item.idDiscussion} />
+          })}
         </Col>
       </Row>
     </>

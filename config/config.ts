@@ -1,5 +1,6 @@
 import { defineConfig } from '@umijs/max'
 import routes from './routes';
+import proxy from './proxy';
 export default defineConfig({
   history: { type: 'hash' },
   /**
@@ -16,6 +17,15 @@ export default defineConfig({
   layout: {
     title: '平台设计',
   },
-  routes
+  routes,
+  proxy,
+  // proxy: {
+  //   '/api': {
+  //     'target': 'http://localhost:3000',
+  //     'changeOrigin': true,
+  //     'pathRewrite': { '^/api' : '' },
+  //   }
+  // }
+
 });
 

@@ -1,21 +1,43 @@
 import DiscussCard from '@/components/DiscussCard'
-import './index.less'
+import { Button, Card } from 'antd'
+import styled from 'styled-components'
+
+const Line = styled.div`
+  margin: 10px 0 20px;
+  border: none;
+  height: 2px;
+  background-color: #bbbbbb;
+`
+
 export default () => {
   return (
     <>
       <div>
-        <span className='back'>返回讨论列表</span>
-        <div className='my-line'></div>
-        <DiscussCard />
-        <div style={{ paddingLeft: '30px', marginTop: '-5px' }}>
-          <DiscussCard />
+        <div
+          style={{ textAlign: 'right' }}
+          onClick={() => {
+            history.back()
+          }}
+        >
+          <Button type='text'>返回讨论列表</Button>
         </div>
-        <div style={{ paddingLeft: '30px', marginTop: '-5px' }}>
+        <Line />
+        <Card>
           <DiscussCard />
-        </div>
-        <div style={{ paddingLeft: '30px', marginTop: '-5px' }}>
-          <DiscussCard />
-        </div>
+          <div style={{ paddingLeft: '30px', marginTop: '-5px' }}>
+            <DiscussCard />
+            {/* 二级回复 */}
+            <div style={{ paddingLeft: '30px', marginTop: '-5px' }}>
+              <DiscussCard />
+            </div>
+          </div>
+          <div style={{ paddingLeft: '30px', marginTop: '-5px' }}>
+            <DiscussCard />
+          </div>
+          <div style={{ paddingLeft: '30px', marginTop: '-5px' }}>
+            <DiscussCard />
+          </div>
+        </Card>
       </div>
     </>
   )

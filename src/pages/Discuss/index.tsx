@@ -9,8 +9,6 @@ const Discuss = () => {
 
   return (
     <Card>
-
-      <div>数组A：</div>
       <Space style={{ marginBottom: '20px' }}>
         <span style={{ fontSize: '20px', fontWeight: 'bold' }}>全部话题</span>
         <Search style={{ width: 200, marginLeft: '40px' }} placeholder='搜索话题' onSearch={onSearch} />
